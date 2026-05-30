@@ -43,7 +43,8 @@ Date: 6/2-26
 
 
 # At the bottom of this file I have created alternative functions for the 
-# collapse operator for directed rootes trees.  
+# collapse operator for directed rootes trees. 
+# Note: These collapse functions do not work togheter with the rest of the code.   
 
 
 #------------------------------------------------------------------------------
