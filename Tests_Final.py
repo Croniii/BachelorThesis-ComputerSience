@@ -1,21 +1,26 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed May 13 16:29:14 2026
-
+Bachelor thesis "Tree-Editing via the collaspe-operator"
+Date: 13/5-26
 @author: Veronica Persson
 """
 
-# These are simulations and test examples of directed rooted trees for the file CodeThesis.py 
+# These are simulations and test examples of directed rooted trees for the file "CodeThesis.py"
 
-# Choose which strategy you want to use on all the simulations, either MaxChildren_ChooseVictimStrategy
-# or SingleNode_ChooseVictimStrategy. Default is set to MaxChildren_ChooseVictimStrategy. 
+from CodeThesis_Final import TreeNode, EditNodes
+from CodeThesis_Final import MaxChildren_ChooseVictimStrategy
+from CodeThesis_Final import SingleNode_ChooseVictimStrategy
 
-from CodeThesis_Draft1 import TreeNode, EditNodes
-from CodeThesis_Draft1 import MaxChildren_ChooseVictimStrategy
-from CodeThesis_Draft1 import SingleNode_ChooseVictimStrategy
+
+# OBS: READ TEXT BELOW!
+# Before running the file choose which strategy you want to use on all the 
+# simulations below, either "MaxChildren_ChooseVictimStrategy" or 
+# "SingleNode_ChooseVictimStrategy". 
+# Default is set to "MaxChildren_ChooseVictimStrategy". 
 
 strategy = MaxChildren_ChooseVictimStrategy()
 #strategy = SingleNode_ChooseVictimStrategy()
+
 
 # -----------------------------------------------------------------------------
 # Simulation 1 - Two non-isomorphic trees 
@@ -54,17 +59,18 @@ print(root2)
 simulation1 = EditNodes() 
 simulation1.choose_victim_strategy = strategy
 
-solution1=simulation1.make_isomorphic(root1,root2) 
+solution1=simulation1.isomorphic_process(root1,root2) 
 
 print("\nOutput from Algortihm:")
+print(f"Isomorphism controll (True if isomorphic, False otherwise): {simulation1.isSuccessfull}")  
 print(simulation1) 
 
-print("Tree1:")
+print("\nTree1:")
 print(root1)
 print("\nTree2:") 
 print(root2)
 
-print("--------------------------------------------------------------------")
+print("--------------------------------------------------------------------------------------")
 
 # -----------------------------------------------------------------------------
 
@@ -109,19 +115,19 @@ print(root4)
 simulation2 = EditNodes() 
 simulation2.choose_victim_strategy = strategy 
 
-solution2=simulation2.make_isomorphic(root3,root4)   
+solution2=simulation2.isomorphic_process(root3,root4) 
 
 print("Output from Algortihm:\n")
-print(solution2)
+print(f"Isomorphism controll (True if isomorphic, False otherwise): {simulation2.isSuccessfull}")  
 print(simulation2)
  
-print("Tree3:")
+print("\nTree3:")
 print(root3)
 print("\nTree4:") 
 print(root4)
 
 
-print("--------------------------------------------------------------------")
+print("-----------------------------------------------------------------------------------------")
 
 
 # -----------------------------------------------------------------------------
@@ -196,18 +202,18 @@ print(root6)
 simulation3 = EditNodes() 
 simulation3.choose_victim_strategy = strategy  
 
-solution3 = simulation3.make_isomorphic(root5,root6)   
+solution3 = simulation3.isomorphic_process(root5,root6)   
 
 print("Output from algorithm:\n") 
-print(solution3) # unnecessary if make isomorphic returns nothing
-print(simulation3) # Makes sense that the EditNodes() returns which nodes were removes and # nodes 
+print(f"Isomorphism controll (True if isomorphic, False otherwise): {simulation3.isSuccessfull}")  
+print(simulation3) 
 
 print("\nTree5")
 print(root5)
 print("\nTree6")
 print(root6) 
 
-print("--------------------------------------------------------------------")
+print("------------------------------------------------------------------------------------------------")
 
 # -----------------------------------------------------------------------------
 
@@ -284,11 +290,11 @@ print(root8)
 simulation4 = EditNodes()
 simulation4.choose_victim_strategy = strategy  
 
-solution4 = simulation4.make_isomorphic(root7,root8)   
+solution4 = simulation4.isomorphic_process(root7,root8)   
 
 print("Output from algorithm:")
-print(solution4)
-print(simulation4)
+print(f"Isomorphism controll (True if isomorphic, False otherwise): {simulation4.isSuccessfull}")  
+print(simulation4) 
 
 print("\nTree7")
 print(root7)
@@ -296,7 +302,7 @@ print("Tree8")
 print(root8) 
 
 
-print("--------------------------------------------------------------------")
+print("-----------------------------------------------------------------------------------------------")
 
 # -----------------------------------------------------------------------------
 
@@ -340,19 +346,19 @@ print(root10)
 simulation5 = EditNodes()
 simulation5.choose_victim_strategy = strategy  
 
-solution5 = simulation5.make_isomorphic(root9,root10)  
+solution5 = simulation5.isomorphic_process(root9,root10)  
 
 
-print("Output from algorithm:")
+print("\nOutput from algorithm:")
+print(f"Isomorphism controll (True if isomorphic, False otherwise): {simulation5.isSuccessfull}")  
 print(simulation5)
-print(solution5)
 
 print("\nTree9")
 print(root9)
 print("\nTree10")
 print(root10) 
 
-print("--------------------------------------------------------------------")
+print("-------------------------------------------------------------------------------------------")
 
 # -----------------------------------------------------------------------------
 
