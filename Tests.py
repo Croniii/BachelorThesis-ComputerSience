@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Bachelor thesis "Tree-Editing via the collaspe-operator"
+Bachelor thesis "Tree-Editing via the collapse-operator"
 Date: 13/5-26
 @author: Veronica Persson
 """
