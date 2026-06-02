@@ -7,9 +7,9 @@ Date: 13/5-26
 
 # These are simulations and test examples of directed rooted trees for the file "CodeThesis.py"
 
-from CodeThesis_Final import TreeNode, EditNodes
-from CodeThesis_Final import MaxChildren_ChooseVictimStrategy
-from CodeThesis_Final import SingleNode_ChooseVictimStrategy
+from CodeThesis import TreeNode, EditNodes
+from CodeThesis import MaxChildren_ChooseVictimStrategy
+from CodeThesis import SingleNode_ChooseVictimStrategy
 
 
 # OBS: READ TEXT BELOW!

@@ -156,7 +156,7 @@ class EditNodes:
     
         return
     
-    def AHU_algorithm(self, node: TreeNode) -> str:
+    def AHU_algorithm(self, root: TreeNode) -> str:
         
         """
             Input: A single "TreeNode" object.
@@ -164,12 +164,12 @@ class EditNodes:
                     represents a tree. """
 
         # Leaf nodes are assigned with () 
-        if node.total_children() == 0:
+        if root.total_children() == 0:
             return "()"
 
         # Recursively encode all children.
         child_encodings = [] 
-        for child in node.children:
+        for child in root.children:
             child_encodings.append(self.AHU_algorithm(child))
     
         # Sorts lexicographically to make encoding independent of child order.
@@ -186,18 +186,18 @@ class EditNodes:
         return self.AHU_algorithm(root1) == self.AHU_algorithm(root2)
     
     
-    def isomorphic_process(self, node1: TreeNode, node2: TreeNode):
+    def isomorphic_process(self, root1: TreeNode, root2: TreeNode):
         """
         The main function we call upon for making two trees isomorphic. This function
         initalizes the process of making two trees isomorphic. """
         
-        self.isSuccessfull = self.isomorphic_check(node1,node2) 
+        self.isSuccessfull = self.isomorphic_check(root1,root2) 
         if self.isSuccessfull:
-            print (f"The two given trees, {node1.id} and {node2.id}, already are isomorphic!")
+            print (f"The two given trees, {root1.id} and {root2.id}, already are isomorphic!")
         
         else:
-            self.make_isomorphic(node1,node2)
-            self.isSuccessfull = self.isomorphic_check(node1,node2)
+            self.make_isomorphic(root1,root2)
+            self.isSuccessfull = self.isomorphic_check(root1,root2)
             
         return
     
