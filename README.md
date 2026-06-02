@@ -4,5 +4,5 @@ This repostory stores my bachelor thesis in computer sience *"Tree-Editing via t
 
 The report can be found in the file *"BachelorThesis"*. The two files *"CodeThesis.py"* and *"Tests.py"* contains all my code written in Python, i.e the algorithm/program related to the report with simulations. 
 
-To test the prorgam, run the *"Tests.py"* file simulations. 
+To test the program, run the *"Tests.py"* simulations. 
 
